@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from '@emotion/styled'
+
+const Desktop = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: #008080; /* Windows 95 teal */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Tahoma', sans-serif;
+`;
+
+const Taskbar = styled.div`
+  height: 40px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+`;
+
+const MainArea = styled.div`
+  flex: 1;
+  padding: 8px;
+  overflow: auto;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  <Desktop>
+      <MainArea>
+        <p>Hello, world!</p>
+      </MainArea>
+      <Taskbar>
+        <button>Start</button>
+      </Taskbar>
+    </Desktop>
   )
 }
 
