@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
 export const StyledButton = styled.button`
-  color: black;
-  font-size: 15px;
+  width: 120px; // TODO fix
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   border-width: 1px;

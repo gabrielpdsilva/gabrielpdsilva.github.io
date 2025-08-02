@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Container, Row, DateContainer } from './styles'
-import { Button } from '../../Button'
+import { Button } from '../Button'
 
 export function Taskbar() {
   const [currentYear] = useState(new Date().getFullYear())
 
-  const onStartClick = () => alert('Start...')
+  const onStartClick = () => console.log('Start...')
 
   return (
     <Container>

@@ -7,9 +7,9 @@ interface ButtonProps {
   disabled?: boolean
 }
 
-export function Button({ onClick, disabled, children }: ButtonProps) {
+export function Button({ onClick, children, ...rest }: ButtonProps) {
   return (
-    <StyledButton onClick={onClick} disabled={disabled}>
+    <StyledButton onClick={onClick} {...rest}>
       {children}
     </StyledButton>
   )
