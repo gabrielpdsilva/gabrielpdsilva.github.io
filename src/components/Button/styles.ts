@@ -1,9 +1,6 @@
 import styled from '@emotion/styled'
 
 export const StyledButton = styled.button`
-  // util:
-  // https://codepen.io/supember/pen/BKmgNZ
-
   color: black;
   font-size: 15px;
   font-weight: bold;
